@@ -1,4 +1,4 @@
-import {log} from './log.js';
+/* import {log} from './log.js';
 
 console.log("running app")
 
@@ -8,4 +8,4 @@ export function sum(a: number, b: number): number {
 
 export function sumLog(a: number, b: number): string {
     return log(a+b);
-}
+} */

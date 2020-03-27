@@ -34,7 +34,7 @@ class App {
             sourceOption.value = element.deviceId;
             this._sourceSelect.appendChild(sourceOption)
         });
-    /*    let sourceOption = document.createElement('option')
+    /* vmos   let sourceOption = document.createElement('option')
         sourceOption.text ="otro";
         sourceOption.value = "00x";
         this._sourceSelect.appendChild(sourceOption)

@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style/barcode.css">
-    <title>Barcode reader - inventario</title>
-    <script src="./dist/zxing.js"></script>
-    <script type="module" src="./dist/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>typescript ejemplo</title>
+    <script type="module" src="dist/app.js"></script>
 </head>
 <body>
-    <div>
-        <video id="video"></video>
-    </div>
+    <h1>typescript</h1>
 
-    <div id="sourceSelectPanel">
-        <label for="sourceSelect">Change video source:</label>
-        <select id="sourceSelect" style="min-width:100px; max-width:400px">
-        </select>
-    </div>
+    <p>Por primera vez, cargar los modulos javascript, entre otros mocha y chai, ejecuar "npm install". Se cargarán estas librerias en el directorio "node_modules".</p>
 
-    <button id="decode">leer</button>
-    <label>Códigos:</label>
-    <textarea id="code" cols="20" rows="40"></textarea> 
+    <p>Para compilación de typescript ejecuta menu terminal --> Run Build Task... (Ctrl + Shift + B)</p>
+    
+    <p></p>Si no se ejecuta correctamente, para realizar la compilación de typescript, ejecutar desde la terminal: tsc -b src test</p>
+    <p> Para depuración, abre index.html con Live Server y a continuación inicia la depuración.</p>
 
-  
+    <p> Para ejecutar los tests con Mocha, abrir <a href="test.html">test.html</a></p>
 </body>
 </html>

@@ -17,6 +17,14 @@
             "name": "Iniciar test",
             "url": "http://localhost:5500/test.html",
             "webRoot": "${workspaceFolder}",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "node app.ts",
+            "program": "${workspaceFolder}/src/app.ts",
+      //      "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": ["${workspaceFolder}/dist/*.js"]
         }
     ]
 }

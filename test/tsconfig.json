@@ -5,6 +5,7 @@
     ],
     "compilerOptions": {
         "outDir": "../dist-test",
+ 
      /*   "baseUrl": ".",
         "paths":{
             "mocha": ["node_modules/mocha/mocha.js"],

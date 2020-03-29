@@ -1,1 +1,0 @@
-tests compilados a javascript a partir de los tests que se encuentran en la carpeta test

@@ -4,7 +4,7 @@
         { "path": "../src" }
     ],
     "compilerOptions": {
-        "outDir": "../bin",
+        "outDir": "../dist-test",
      /*   "baseUrl": ".",
         "paths":{
             "mocha": ["node_modules/mocha/mocha.js"],

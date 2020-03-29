@@ -12,7 +12,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.2.10",
+    "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.5",
     "chai": "^4.2.0",
@@ -23,10 +23,18 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon",
-    "build": "rimraf ./dist"
+    "start": "node dist/app.js",
+    "start:build": "npm run build && npm run start",
+   
+    "start:live": "nodemon",
+    "start:live:build": "tsc -b src test && npm run start",
+
+    "delete": "rimraf ./dist && rimraf ./dist-test",
+    "build": "npm run delete && tsc -b src test",
+    "build:live": "npm run delete && tsc -b src test -w",
+    
+    "test": "npm run build && ./node_modules/.bin/mocha  --reporter spec dist-test/**/*.test.js"
   },
-  "author": "",
+  "author": "Santiago Galván Sánchez",
   "license": "ISC"
 }

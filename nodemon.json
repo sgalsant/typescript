@@ -1,6 +1,6 @@
 {
-    "watch": ["dist"],
-    "ext": ".js,.mjs",
+    "watch": ["src","test"],
+    "ext": ".ts",
     "ignore": [],
-    "exec": "node ./dist/app.js"
+    "exec": "npm run start:live:build"
   }

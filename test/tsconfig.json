@@ -1,10 +1,12 @@
 {
     "extends": "../tsconfig-base.json",
+ 
     "references": [
         { "path": "../src" }
     ],
     "compilerOptions": {
         "outDir": "../dist-test",
+        "allowSyntheticDefaultImports": true,
  
      /*   "baseUrl": ".",
         "paths":{

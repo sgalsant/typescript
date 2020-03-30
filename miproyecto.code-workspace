@@ -8,5 +8,7 @@
 		"files.autoSave": "afterDelay",
 		"debug.allowBreakpointsEverywhere": true,
 		"liveServer.settings.CustomBrowser": "chrome",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
 	}
 }

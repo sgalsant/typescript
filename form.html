@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:not(:placeholder-shown):invalid {
+            background-color: red;
+        }
+
+
+        input:not(:placeholder-shown):invalid + span::after {
+            content: "ERROR asdfa";
+        }
+
+        input:valid {
+            background-color:white;
+        }
+
+
+   
+
+    </style>
+</head>
+<body>
+    <form>
+        <form>
+            Readonly --> se tiene en cuenta la información pero no se puede cambiar<br>
+            <label for="name">First name:</label><br>
+            <input type="text" id="name" name="name" value="John" readonly><br>
+
+            Disabled --> no se tiene en cuenta la información en este contexto<br>
+            <label for="name2">First name:</label><br>
+            <input type="text" id="name2" name="name2" value="John" disabled><br>
+
+            Placeholder --> se muestra texto de ayuda para que el usuario complete el campo<br>
+            Required --> es obligatorio indicar un valor<br>
+            MaxLength --> máxima longitud permitida<br>
+            Minlength --> mínima longitud del campo<br>
+            autofocus --> campo que toma el foco (cursor) cuando se carga la página. Primer campo a rellenar<br>
+
+            <label for="name3">First name:</label><br>
+            <input type="text" id="name3" name="name3" placeholder="tu nombre" required
+                  maxlength="5" minlength="2" autofocus><span></span><br>
+
+            Tipos de inputs. <a href="https://www.w3schools.com/html/html_form_input_types.asp">Consultar esta página</a><br>
+        <input type="button">
+        <input type="checkbox">
+        <input type="color">
+        <input type="date">
+        <input type="datetime-local">
+        <br>email<br>
+        <input type="email">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="month">
+        <input type="number">
+        <input type="password">
+        <input type="radio">
+        <input type="range">
+        <input type="reset">
+        <input type="search">
+        <input type="submit">
+        <input type="tel">
+        <input type="text">
+        <input type="time">
+        <input type="url">
+        <input type="week">
+        <br>
+
+
+
+        Datalist permite que el usuario seleccione uno de los valores de la lista o introduzca
+        uno nuevo. En un campo select sólo se permite elegir uno de los valores de la lista<br>
+
+        <input list="browsers" placeholder="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+</code>
+    </form>
+</body>
+</html>

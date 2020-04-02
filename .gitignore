@@ -3,4 +3,6 @@ dist-test/
 dist/
 package-lock.json
 gitignore/
+.nyc_output
+coverage
 

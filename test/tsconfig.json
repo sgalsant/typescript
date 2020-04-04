@@ -1,17 +1,21 @@
 {
     "extends": "../tsconfig-base.json",
  
-    "references": [
-        { "path": "../src" }
-    ],
+   
     "compilerOptions": {
-        "outDir": "../dist-test",
-        "allowSyntheticDefaultImports": true,
+        "outDir": "../dist_test",
+            "composite": true,
+ //       "allowSyntheticDefaultImports": true,
+
  
      /*   "baseUrl": ".",
         "paths":{
             "mocha": ["node_modules/mocha/mocha.js"],
         }
     */
-    }
+    },
+
+    "exclude": [
+        "helper.cjs",
+    ],
 }

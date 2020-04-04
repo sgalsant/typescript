@@ -1,4 +1,3 @@
-export function hello(): string {
-  console.log('hello');
-  return 'hello';
+export function suma(a: number, b: number): number {
+  return a + b;
 }

@@ -4,12 +4,14 @@
   "description": "Plantilla proyecto visual code para clase de programación con javascript, typescript y node",
   "main": "src/app.js",
   "type": "module",
+  "homepage": "https://github.com/sgalsant/typescript",
   "bin": {
     "typescript": "app.test.js"
   },
   "directories": {
     "test": "test"
   },
+   "engines" : { "node" : ">=13.0.0" },
   "dependencies": {},
   "devDependencies": {
     "@shopify/eslint-plugin": "^36.0.2",
@@ -40,11 +42,12 @@
     "test:live": "nodemon --exec 'npm run build && npm run test'",
 
     "browser:test": "npm run delete && npm run build && npm run browser:live & npm run build:live",
-    "browser:live": "live-server --browser=\"google-chrome\" --wait=2000 --port=8080 --open=\"test.html\" --watch=\"dist,dist_test,public,*.html\" -V", 
+    "browser:live": "live-server --browser=\"google-chrome\" --wait=2000 --port=8080 --open=\"test/test.html\" --watch=\"dist,dist_test,public,*.html\" -V", 
     
     "start:build": "npm run delete && npm run build && npm run start",
   
-     "lint": "eslint . --ext .ts --ext .js --fix",
+    "format": "npm run lint && npm run prettier-format",
+    "lint": "eslint . --ext .ts --ext .js --ext .test.ts --fix",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
 
     "delete": "rimraf ./dist && rimraf ./dist_test",

@@ -16,6 +16,7 @@
     <script>
         mocha.setup('bdd');
         mocha.checkLeaks();
+        mocha.timeout(999999); //para evitar el timeout cuando se depura
     </script>
 
     <script type="module" src="./dist_test/app.test.js"></script>

@@ -1,81 +1,77 @@
-// import {suma} from './otro.js';
-export function ejercicio1(d: number) {
-  let result: number[][] = Array.from({ length: d }, (_, i) => new Array(d).fill(10)); 
+// Ejercicios de programación de array multidimensionales
+// para ejecutar los test, ejecutar en la línea de comandos: npm run test:build
 
-  // console.table(result);
-  return result;
+// inicializar una matriz cuadrada con todos los valores a 10
+export function ejercicio1(d: number): number[][] | null {
+  return null;
 }
 
-export function ejercicio2(d: number): number[][] {
-  let result: number[][]= Array.from({length:d}, 
-    (_, i) => Array.from({length:d}, 
-      (_, j)=>i*d+j)); 
-  
-//   console.table(result);
-  return result;
+// inicializar una matriz con valores crecientes
+export function ejercicio2(d: number): number[][] | null{
+  return null;
 }
 
-export function ejercicio3(d: number): number[][] {
-  let result: number[][] = Array.from({ length: d }, (_, i) =>
-      Array.from({ length: d }, (_, j) => i==j?1:0)
-    ); 
-  return result;
+// generar una matriz identidad
+export function ejercicio3(d: number): number[][] | null{
+  return null;
 }
 
-export function ejercicio4(matriz: number[][]): number[] {
-  console.table(matriz);
-  let result: number[] = matriz.map(fila => fila.reduce((suma: number, valor: number)=>suma+valor ));
-
-  return result;
+// suma por filas de una matriz
+export function ejercicio4(matriz: number[][]): number[] | null {
+  return null;
 }
 
-export function ejercicio5(matriz: number[][]): number[] {
-  let result: number[] = new Array(matriz[0].length).fill(0);
-  for (let i = 0; i < matriz[0].length; i++) {
-    for (let j = 0; j < matriz.length; j++) {
-      result[i] += matriz[j][i];
-    }
-  }
-
-  return result;
+// suma por columnas de una matriz
+export function ejercicio5(matriz: number[][]): number[] | null {
+  return null;
 }
 
-export function ejercicio6(matriz: number[][]): number {
-  let result: number = 0;
-  for (let fila of matriz) {
-    for (let valor of fila) {
-      result += valor;
-    }
-  }
-
-  return result;
+// suma de los elementos de una matriz de dos dimensiones
+export function ejercicio6(matriz: number[][]): number | null{
+  return null;
 }
 
-export function ejercicio7(matriz: number[][][]): number {
-  let result: number = 0;
-  for (let fila of matriz) {
-    for (let columna of fila) {
-      for (let valor of columna)
-        result += valor;
-    }
-  }
-
-  return result;
+// suma de todos los elementos de una matriz de 3 dimensiones
+export function ejercicio7(matriz: number[][][]): number | null {
+  return null;
 }
 
-export function ejercicio8(matrizA: number[][], matrizB: number[][]): number[][] {
-  let result: number[][] = new Array<number[]>(matrizA.length);
-  for (let i = 0; i < matrizA.length; i++) {
-    result[i] = new Array<number>(matrizA[i].length);
-    for (let j = 0; j < matrizA[i].length; j++) {
-      result[i][j] = matrizA[i][j] + matrizB[i][j];
-    }
-  }
-
-  return result;
+// suma de dos matrices
+export function ejercicio8(
+  matrizA: number[][],
+  matrizB: number[][]
+): number[][] | null {
+  return null;
 }
 
+// multiplicación de dos matrices
+export function ejercicio9(
+  matrizA: number[][],
+  matrizB: number[][]
+): number[][] | null{
+  return null;
+}
 
+// transponer una matriz
+export function ejercicio10(
+  matriz: number[][]
+): number[][] | null{
+   return null;
+}
 
+// invertir los elementos de cada fila
+export function ejercicio11(
+  matriz: number[][]
+): number[][] | null{
+  return null;
+}
 
+// rotar una matriz a la derecha
+export function ejercicio12(matriz: number[][]): number[][] | null{
+  return null;
+}
 
+// decodificar mensaje
+export function ejercicio13(texto: string[][], rejilla: number[][]): string | null {
+  return null
+}

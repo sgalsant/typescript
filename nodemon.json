@@ -2,5 +2,5 @@
     "watch": ["src","test"],
     "ext": ".ts",
     "ignore": [],
-    "delay": 3
+    "delay": 5
   }

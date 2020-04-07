@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
   </head>
   <body>
 
     <div id="mocha"></div>
     
-    <script src="node_modules/chai/chai.js"></script>
-    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
    
     <script>
         mocha.setup('bdd');
@@ -19,7 +19,7 @@
         mocha.timeout(999999); //para evitar el timeout cuando se depura
     </script>
 
-    <script type="module" src="./dist_test/app.test.js"></script>
+    <script type="module" src="../dist_test/app.test.js"></script>
   
     <script type="module">
       mocha.run();

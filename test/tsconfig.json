@@ -16,6 +16,6 @@
     },
 
     "exclude": [
-        "helper.cjs",
+        "../helper/test.cjs",
     ],
 }

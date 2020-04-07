@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "port": 9223,
+            "url": "http://localhost:8080/public/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "type": "node",
             "request": "attach",
             "name": "Attach to node",
@@ -19,23 +27,13 @@
             "request": "attach",
             "name": "Attach to Chrome",
             "port": 9222,
+            "urlFilter": "http://127.0.0.1:8080/*",
             "webRoot": "${workspaceFolder}"
         },
+        
+
       
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "web app",
-            "url": "http://localhost:5500",
-            "webRoot": "${workspaceFolder}",
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "web test",
-            "url": "http://localhost:5500/test.html",
-            "webRoot": "${workspaceFolder}",
-        },
+       
    {
     "name": "node test",
     "type": "node",

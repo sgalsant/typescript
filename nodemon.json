@@ -1,6 +1,7 @@
 {
-    "watch": ["src","test"],
-    "ext": ".ts",
-    "ignore": [],
-    "delay": 5
+    "verbose": false,
+    "watch": ["dist","dist_test"],
+    "ext": "*",
+    "ignore": ["*.d.ts"],
+    "delay": 3000
   }

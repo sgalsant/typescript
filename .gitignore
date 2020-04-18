@@ -5,4 +5,5 @@ package-lock.json
 gitignore/
 .nyc_output
 coverage
+.git
 

@@ -1,12 +1,15 @@
+// https://www.chaijs.com/api/assert/
 
+import * as app from '../dist/app.js';
 
-// import * as App from '../dist/app.js';
+const assert = chai.assert;
 
+describe('tests en test/app.test.ts', () => {
+  it('ok', () => {
+    assert.isOk(true, 'prueba de funcionamiento de test');
+  });
 
-//https://www.chaijs.com/api/assert/
-
-describe ("mi grupo de test en el fichero app.test.ts", function() {
-    it("un test", function() {
-        chai.assert(8 == 8, "Genial 8 == 8")
-    })
-})
+  it ('suma', function() {
+    assert.equal(app.sumar(3,2),5);
+  })
+});

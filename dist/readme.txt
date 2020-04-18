@@ -1,1 +1,0 @@
-Archivos compilados javascript a partir de los ficheros typescript que se encuentran en src

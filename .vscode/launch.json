@@ -39,6 +39,20 @@
             "port": 9229
         },
 
+        { // ejecuta y depura el fichero actual usando node
+            "name": "node file",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${file}",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceFolder}/dist_test/*",
+                "${workspaceFolder}/dist/*"
+            ],
+            "preLaunchTask":""
+        },
+
         {
             "name": "node test",
             "type": "node",

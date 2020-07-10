@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "es6",
+      "outDir": "dist",
+      "sourceMap": true,
+      "allowJs": true,
+      "noImplicitAny": true,
+      "strict": true,
+      "allowSyntheticDefaultImports": true,
+      "typeRoots": [
+        "./types",
+        "./node_modules/@types"
+      ]
+    },
+
+    "files": ["./types/consola.d.ts"],
+
+    "include": ["./src/**/*", "./test/**/*"],
+
+    "exclude": [
+      "node_modules",
+      "types"
+    ],
+}

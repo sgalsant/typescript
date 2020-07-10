@@ -7,3 +7,4 @@ gitignore/
 coverage
 .git
 
+dist_test/tsconfig.tsbuildinfo

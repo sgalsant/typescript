@@ -2,18 +2,18 @@
 <html lang="es">
 
 <head>
-  <title>Ejercicio</title>
+  <title>consola</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../style/consola.css">
 
-  <script src="../helper/consolaEx.js" defer></script>
-  <script src="../src/consola.js" defer></script>
+  <script src="../helper/consola.js" defer></script>
+
 </head>
 
 <body>
   <div class="wrapper">
-    <h1>Ejercicios de programación</h1>
+    <h1>Consola de programación</h1>
 
     <label for="input">input</label>
     <textarea id="input"></textarea>
@@ -22,7 +22,12 @@
     <textarea id="output" readonly></textarea>
 
     <button id="run" type="button" class="run">execute</button>
-    <p>Se ejecutará la función "execute()" del fichero src/consola.js</p>
+    <div class="help">
+    <p id="helpExecute">Se ejecutará la función "execute()" del fichero src/ejercicio.js</p>
+    <p>Para ejecutar otro fichero y/o función añadirlo en la url "?script=fichero&execute=funcion"</p>
+    </div>
+   
+   
     <div id="wrapper_canvas">
       <label for="canvas">canvas</label>
       <canvas id="canvas">
@@ -31,7 +36,9 @@
     </div>
     <input type="checkbox" id="grid">mostrar grid
     <button id="play" type="button" class="run">play</button>
-    <p>Se ejecutará repetidamente la función "play()" del fichero src/consola.js.</p>
+    <div class="help">
+    <p id="helpPlay">Se ejecutará repetidamente la función "play()" del fichero src/ejercicio.js.</p>
+    </div>
   </div>
 </body>
 

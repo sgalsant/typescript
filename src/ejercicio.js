@@ -1,13 +1,15 @@
 console.log('cargado fichero src/consola.js');
 
 function execute() {
-  writeLine('hola mundoooo!!');
-  const text = readLine();
-  writeLine(text);
+  let line = readLine();
+  writeLine(line);
+
 }
 
-let x = 0;
-let y = 0;
+
+// play
+let x = 50;
+let y = 50;
 
 function play() {
   x += 1;
@@ -16,4 +18,5 @@ function play() {
   context2d.beginPath();
   context2d.arc(x, y, 50, 0, 2 * Math.PI);
   context2d.stroke();
+  return true; // si retorna true se llamará repetidamente
 }

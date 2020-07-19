@@ -3,6 +3,10 @@ let countLine = 0;
 let canvas;
 let context2d;
 
+let scriptEjercicio = null; // fichero javascript a ejecutar al pulsar los botones "execute" y "play"
+let fnExecute = null; // funcion a ejecutar al pulsar el botón "execute"
+let fnPlay = null;
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('run').addEventListener('click', doRun);
   document.getElementById('play').addEventListener('click', doPlay);
@@ -19,14 +23,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   canvas = document.getElementById('canvas');
   context2d = canvas.getContext('2d');
+
+  let params = (new URL(document.location)).searchParams;
+  scriptEjercicio = params.get("script");
+  if (scriptEjercicio == null) {
+    scriptEjercicio = "ejercicio.js"
+  }
+  scriptEjercicio = "../src/" + scriptEjercicio;
+  let script = document.createElement("script");
+  script.src = scriptEjercicio;
+  script.async = true;
+  document.head.appendChild(script);
+
+  fnExecute = params.get("execute");
+  if (fnExecute == null) {
+    fnExecute = "execute";
+  }
+
+  fnPlay = params.get("play");
+  if (fnPlay == null) {
+    fnPlay = "play";
+  }
+
+  document.getElementById("helpExecute").innerHTML = `Se ejecutará la función "${fnExecute}" del fichero "${scriptEjercicio}"`;
+  document.getElementById("helpPlay").innerHTML = `Se ejecutará la función "${fnPlay}" del fichero "${scriptEjercicio}"`;
 });
 
 function readLine() {
   const input = document.getElementById('input');
   const lines = input.value.split('\n');
-  if (countLine >= lines.length - 1) {
+  if ((countLine > lines.length - 1) ||
+   ((countLine == lines.length - 1) && (lines[countLine].length == 0))) {
     return null;
-  }
+  } 
 
   return lines[countLine++];
 }
@@ -63,13 +92,15 @@ function doPlay() {
     drawGridLine(context2d, 20);
   }
 
-  if (play()) {
+  if (globalThis[fnPlay]()) {
     requestAnimationFrame(doPlay);
   }
 }
 
 function doRun() {
-  execute();
+  // execute();
+  countLine = 0;
+  globalThis[fnExecute]();
 }
 
 window.addEventListener('resize', (even) => {

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (scriptEjercicio == null) {
     scriptEjercicio = "ejercicio.js"
   }
-  scriptEjercicio = "../src/" + scriptEjercicio;
+  scriptEjercicio = "../dist/src/" + scriptEjercicio;
   let script = document.createElement("script");
   script.src = scriptEjercicio;
   script.async = true;

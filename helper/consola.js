@@ -7,7 +7,7 @@ let scriptEjercicio = null; // fichero javascript a ejecutar al pulsar los boton
 let fnExecute = null; // funcion a ejecutar al pulsar el botón "execute"
 let fnPlay = null;
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('run').addEventListener('click', doRun);
   document.getElementById('play').addEventListener('click', doPlay);
 
@@ -30,11 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     scriptEjercicio = "ejercicio.js"
   }
   scriptEjercicio = "../dist/src/" + scriptEjercicio;
-  let script = document.createElement("script");
+ 
+ /* let script = document.createElement("script");
+  script.type = "module";
   script.src = scriptEjercicio;
   script.async = true;
   document.head.appendChild(script);
+*/
 
+  let moduleEjercicio = await import(scriptEjercicio);
+  fnExecute = moduleEjercicio.execute;
+  fnPlay = moduleEjercicio.play;
+  /*
   fnExecute = params.get("execute");
   if (fnExecute == null) {
     fnExecute = "execute";
@@ -44,9 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (fnPlay == null) {
     fnPlay = "play";
   }
+*/
 
-  document.getElementById("helpExecute").innerHTML = `Se ejecutará la función "${fnExecute}" del fichero "${scriptEjercicio}"`;
-  document.getElementById("helpPlay").innerHTML = `Se ejecutará la función "${fnPlay}" del fichero "${scriptEjercicio}"`;
+  document.getElementById("helpExecute").innerHTML = `Se ejecutará la función execute del fichero "${scriptEjercicio}"`;
+  document.getElementById("helpPlay").innerHTML = `Se ejecutará la función play del fichero "${scriptEjercicio}"`;
 });
 
 function readLine() {
@@ -100,7 +108,8 @@ function doPlay() {
 function doRun() {
   // execute();
   countLine = 0;
-  globalThis[fnExecute]();
+  fnExecute();
+ // globalThis[fnExecute]();
 }
 
 window.addEventListener('resize', (even) => {

@@ -1,6 +1,6 @@
 console.log('cargado fichero src/consola.js');
 
-function execute() {
+export function execute() {
   let line = readLine();
   writeLine(line);
 
@@ -11,7 +11,7 @@ function execute() {
 let x = 50;
 let y = 50;
 
-function play() {
+export function play() {
   x += 1;
   y += 2;
 
@@ -20,3 +20,4 @@ function play() {
   context2d.stroke();
   return true; // si retorna true se llamará repetidamente
 }
+

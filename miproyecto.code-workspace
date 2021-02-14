@@ -9,7 +9,7 @@
 		"debug.allowBreakpointsEverywhere": true,
 		"liveServer.settings.CustomBrowser": "chrome",
 		"liveServer.settings.ChromeDebuggingAttachment": true,
-		"liveServer.settings.port": 8080,
+		"liveServer.settings.port": 8081,
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
 	}

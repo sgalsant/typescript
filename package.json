@@ -16,7 +16,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@shopify/eslint-plugin": "^36.0.2",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.5",
@@ -26,7 +25,6 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-shopify": "^35.1.0",
     "graphql": "14.0.0",
     "live-server": "^1.2.1",
     "mocha": "^7.1.0",
@@ -37,7 +35,7 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/src/app.js",
     "test": "npm run mocha --silent",
     "browser": "npm run chrome-debugging & npm run buildAll && npm run live-server & npm run build:live",
     "test:live": "npm run buildAll && nodemon --exec 'npm run mocha --silent' & npm run build:live --silent",

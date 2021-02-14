@@ -1,0 +1,17 @@
+Proyecto para realizar ejercicios de programación usando javascript, typescript, nodejs
+ y testing con Mocha
+
+Incluir el código en la carpeta "src" y los test en la carpeta "test". El código compilado será
+localizado en la carpeta "dist".
+
+Para compilar automáticamente, detectando cambios y actualizando la página en el navegador usando live-server
+emplear el comando "npm run browser"
+
+Los tests pueden ser ejecutados desde navegador accediendo a la página "test.html" o desde línea
+de comando ejecutando el comando "npm run test". Si quieres que los test se ejecuten automáticamente
+al detectar cambios en los archivos "npm run test:live".
+
+Si se quiere ejecutar "app.js" desde línea de comandos empleando nodejs, "npm run start".
+
+
+

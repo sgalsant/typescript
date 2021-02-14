@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     scriptEjercicio = "ejercicio.js"
   }
   scriptEjercicio = "../dist/src/" + scriptEjercicio;
- 
- /* let script = document.createElement("script");
-  script.type = "module";
-  script.src = scriptEjercicio;
-  script.async = true;
-  document.head.appendChild(script);
-*/
+
+  /* let script = document.createElement("script");
+   script.type = "module";
+   script.src = scriptEjercicio;
+   script.async = true;
+   document.head.appendChild(script);
+ */
 
   let moduleEjercicio = await import(scriptEjercicio);
   fnExecute = moduleEjercicio.execute;
@@ -61,9 +61,9 @@ function readLine() {
   const input = document.getElementById('input');
   const lines = input.value.split('\n');
   if ((countLine > lines.length - 1) ||
-   ((countLine == lines.length - 1) && (lines[countLine].length == 0))) {
+    ((countLine == lines.length - 1) && (lines[countLine].length == 0))) {
     return null;
-  } 
+  }
 
   return lines[countLine++];
 }
@@ -100,7 +100,7 @@ function doPlay() {
     drawGridLine(context2d, 20);
   }
 
-  if (globalThis[fnPlay]()) {
+  if (fnPlay()) {
     requestAnimationFrame(doPlay);
   }
 }
@@ -109,7 +109,7 @@ function doRun() {
   // execute();
   countLine = 0;
   fnExecute();
- // globalThis[fnExecute]();
+  // globalThis[fnExecute]();
 }
 
 window.addEventListener('resize', (even) => {
